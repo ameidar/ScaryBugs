@@ -11,7 +11,7 @@
 #import <CoreData/CoreData.h>
 
 @interface RWTMasterViewController : UITableViewController <NSFetchedResultsControllerDelegate>
-
+@property (strong) NSMutableArray *bugs;
 @property (strong, nonatomic) NSFetchedResultsController *fetchedResultsController;
 @property (strong, nonatomic) NSManagedObjectContext *managedObjectContext;
 
