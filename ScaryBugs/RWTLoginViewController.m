@@ -6,6 +6,8 @@
 //  Copyright (c) 2014 ___ou___. All rights reserved.
 //
 
+// Ami is the king!!!
+
 #import "RWTLoginViewController.h"
 
 @interface RWTLoginViewController ()
