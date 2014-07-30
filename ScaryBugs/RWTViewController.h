@@ -8,7 +8,7 @@
 
 #import <UIKit/UIKit.h>
 
-@interface RWTViewController : UIViewController
+@interface RWTViewController : UIViewController <UITextFieldDelegate>
 {
 
 IBOutlet UITextField *usernameField;
@@ -16,6 +16,7 @@ IBOutlet UITextField *passwordField;
 
 NSDictionary *credentialsDictionary;
 }
+- (IBAction)backgroundTap:(id)sender;
 
 - (IBAction)enterCredentials;
 

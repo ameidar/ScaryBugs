@@ -31,6 +31,10 @@
     // Do any additional setup after loading the view.
 }
 
+- (IBAction)backgroundTap:(id)sender {
+    [self.view endEditing:YES];
+}
+
 - (IBAction)enterCredentials
 {
     if ([[credentialsDictionary objectForKey:usernameField.text]isEqualToString:passwordField.text]) {
@@ -41,6 +45,12 @@
         UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Incorrect Password" message:@"This password is incorrect." delegate:self cancelButtonTitle:@"Dismiss" otherButtonTitles:nil];
         [alert show];
     }
+}
+
+- (BOOL)textFieldShouldReturn:(UITextField *)textField
+{
+    [textField resignFirstResponder];
+    return YES;
 }
 
 
