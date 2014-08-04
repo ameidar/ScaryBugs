@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		9D951A2519883D3F004CE003 /* RWTCategoriesViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9D951A2419883D3F004CE003 /* RWTCategoriesViewController.m */; };
+		9D951A2819883D64004CE003 /* RWTCategory.m in Sources */ = {isa = PBXBuildFile; fileRef = 9D951A2719883D64004CE003 /* RWTCategory.m */; };
 		E118C2511960A3440036AB81 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E118C2501960A3440036AB81 /* Foundation.framework */; };
 		E118C2531960A3440036AB81 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E118C2521960A3440036AB81 /* CoreGraphics.framework */; };
 		E118C2551960A3440036AB81 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E118C2541960A3440036AB81 /* UIKit.framework */; };
@@ -58,6 +60,10 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		9D951A2319883D3F004CE003 /* RWTCategoriesViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RWTCategoriesViewController.h; sourceTree = "<group>"; };
+		9D951A2419883D3F004CE003 /* RWTCategoriesViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RWTCategoriesViewController.m; sourceTree = "<group>"; };
+		9D951A2619883D64004CE003 /* RWTCategory.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RWTCategory.h; sourceTree = "<group>"; };
+		9D951A2719883D64004CE003 /* RWTCategory.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RWTCategory.m; sourceTree = "<group>"; };
 		E118C24D1960A3440036AB81 /* ScaryBugs.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ScaryBugs.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E118C2501960A3440036AB81 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		E118C2521960A3440036AB81 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -222,6 +228,8 @@
 				E118C26E1960A3440036AB81 /* RWTDetailViewController.m */,
 				E118C2701960A3440036AB81 /* Images.xcassets */,
 				E118C2671960A3440036AB81 /* ScaryBugs.xcdatamodeld */,
+				9D951A2319883D3F004CE003 /* RWTCategoriesViewController.h */,
+				9D951A2419883D3F004CE003 /* RWTCategoriesViewController.m */,
 				E118C2611960A3440036AB81 /* RWTAppDelegate.h */,
 				E1CF3CC519844D1A0003AACF /* RWTLoginViewController.h */,
 				E1CF3CC619844D1A0003AACF /* RWTLoginViewController.m */,
@@ -234,6 +242,8 @@
 			children = (
 				E118C2911960A6EE0036AB81 /* RWTScaryBugData.h */,
 				E118C2921960A6EE0036AB81 /* RWTScaryBugData.m */,
+				9D951A2619883D64004CE003 /* RWTCategory.h */,
+				9D951A2719883D64004CE003 /* RWTCategory.m */,
 				E118C2941960A8210036AB81 /* RWTScaryBugDoc.h */,
 				E118C2951960A8210036AB81 /* RWTScaryBugDoc.m */,
 			);
@@ -400,9 +410,11 @@
 			files = (
 				E118C2961960A8210036AB81 /* RWTScaryBugDoc.m in Sources */,
 				E118C26F1960A3440036AB81 /* RWTDetailViewController.m in Sources */,
+				9D951A2519883D3F004CE003 /* RWTCategoriesViewController.m in Sources */,
 				E118C2C0196348720036AB81 /* RWTUIImageExtras.m in Sources */,
 				E118C26C1960A3440036AB81 /* RWTMasterViewController.m in Sources */,
 				E118C2691960A3440036AB81 /* ScaryBugs.xcdatamodeld in Sources */,
+				9D951A2819883D64004CE003 /* RWTCategory.m in Sources */,
 				E118C2BC1960CF3E0036AB81 /* RWTRateView.m in Sources */,
 				E118C2931960A6EE0036AB81 /* RWTScaryBugData.m in Sources */,
 				E1FBAB121978E5D6008A524B /* SVProgressHUD.m in Sources */,
@@ -536,7 +548,9 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "ScaryBugs/ScaryBugs-Prefix.pch";
 				INFOPLIST_FILE = "ScaryBugs/ScaryBugs-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = 1;
 				WRAPPER_EXTENSION = app;
 			};
 			name = Debug;
@@ -549,7 +563,9 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "ScaryBugs/ScaryBugs-Prefix.pch";
 				INFOPLIST_FILE = "ScaryBugs/ScaryBugs-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = 1;
 				WRAPPER_EXTENSION = app;
 			};
 			name = Release;
