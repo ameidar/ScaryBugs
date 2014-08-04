@@ -11,7 +11,7 @@
 #import "RWTScaryBugData.h"
 
 #import "RWTMasterViewController.h"
-
+#import "RWTAppDelegate.h"
 #import "RWTDetailViewController.h"
 
 
@@ -37,18 +37,35 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+    
+    
+    // RWTCategoriesViewController *controller = (RWTCategoriesViewController *)navigationController.topViewController;
+    //masterController.managedObjectContext = self.managedObjectContext;
+    RWTAppDelegate * appDelegate = (RWTAppDelegate*)[[UIApplication sharedApplication] delegate];
+    self.managedObjectContext =  appDelegate.managedObjectContext;
+    
 	// Do any additional setup after loading the view, typically from a nib.
     self.navigationItem.leftBarButtonItem = self.editButtonItem;
+    self.navigationItem.leftItemsSupplementBackButton = YES ;
 
     UIBarButtonItem *addButton = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemAdd target:self action:@selector(insertNewObject:)];
     self.navigationItem.rightBarButtonItem = addButton;
     // At the end of viewDidLoad
     self.title = @"Documents";
     
-    self.navigationItem.leftBarButtonItem = self.editButtonItem;
-    self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc]
-                                              initWithBarButtonSystemItem:UIBarButtonSystemItemAdd
-                                              target:self action:@selector(addTapped:)];
+   // self.navigationItem.leftBarButtonItem = self.editButtonItem;
+   // self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc]
+   //                                           initWithBarButtonSystemItem:UIBarButtonSystemItemAdd
+   //                                           target:self action:@selector(addTapped:)];
+
+    
+    RWTScaryBugDoc *bug1 = [[RWTScaryBugDoc alloc] initWithTitle:@"Potato Bug" rating:4 thumbImage:[UIImage imageNamed:@"potatoBugThumb.jpg"] fullImage:[UIImage imageNamed:@"potatoBug.jpg"]];
+    RWTScaryBugDoc *bug2 = [[RWTScaryBugDoc alloc] initWithTitle:@"House Centipede" rating:3 thumbImage:[UIImage imageNamed:@"centipedeThumb.jpg"] fullImage:[UIImage imageNamed:@"centipede.jpg"]];
+    RWTScaryBugDoc *bug3 = [[RWTScaryBugDoc alloc] initWithTitle:@"Wolf Spider" rating:5 thumbImage:[UIImage imageNamed:@"wolfSpiderThumb.jpg"] fullImage:[UIImage imageNamed:@"wolfSpider.jpg"]];
+    RWTScaryBugDoc *bug4 = [[RWTScaryBugDoc alloc] initWithTitle:@"Lady Bug" rating:1 thumbImage:[UIImage imageNamed:@"ladybugThumb.jpg"] fullImage:[UIImage imageNamed:@"ladybug.jpg"]];
+    
+    if (!_bugs)
+        _bugs = [NSMutableArray arrayWithObjects:bug1, bug2, bug3, bug4, nil];
 }
 
 - (void)didReceiveMemoryWarning
@@ -93,13 +110,6 @@
     //return [sectionInfo numberOfObjects];
     return  _bugs.count;
 }
-
-/*- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
-{
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"Cell" forIndexPath:indexPath];
-    [self configureCell:cell atIndexPath:indexPath];
-    return cell;
-}*/
 
 //Replace tableView:cellForRowAtIndexPath with the following
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
