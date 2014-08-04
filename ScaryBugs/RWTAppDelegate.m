@@ -7,13 +7,14 @@
 //
 
 // At top of file
-#import "RWTMasterViewController.h"
-#import "RWTScaryBugDoc.h"
+//#import "RWTMasterViewController.h"
+//#import "RWTScaryBugDoc.h"
 
 #import "RWTAppDelegate.h"
-
+#import "RWTCategoriesViewController.h"
 #import "RWTMasterViewController.h"
-
+#import "RWTScaryBugDoc.h"
+#import "RWTCategory.h"
 @implementation RWTAppDelegate
 
 @synthesize managedObjectContext = _managedObjectContext;
@@ -23,20 +24,33 @@
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
     
-    RWTScaryBugDoc *bug1 = [[RWTScaryBugDoc alloc] initWithTitle:@"Potato Bug" rating:4 thumbImage:[UIImage imageNamed:@"potatoBugThumb.jpg"] fullImage:[UIImage imageNamed:@"potatoBug.jpg"]];
-    RWTScaryBugDoc *bug2 = [[RWTScaryBugDoc alloc] initWithTitle:@"House Centipede" rating:3 thumbImage:[UIImage imageNamed:@"centipedeThumb.jpg"] fullImage:[UIImage imageNamed:@"centipede.jpg"]];
-    RWTScaryBugDoc *bug3 = [[RWTScaryBugDoc alloc] initWithTitle:@"Wolf Spider" rating:5 thumbImage:[UIImage imageNamed:@"wolfSpiderThumb.jpg"] fullImage:[UIImage imageNamed:@"wolfSpider.jpg"]];
-    RWTScaryBugDoc *bug4 = [[RWTScaryBugDoc alloc] initWithTitle:@"Lady Bug" rating:1 thumbImage:[UIImage imageNamed:@"ladybugThumb.jpg"] fullImage:[UIImage imageNamed:@"ladybug.jpg"]];
-    NSMutableArray *bugs = [NSMutableArray arrayWithObjects:bug1, bug2, bug3, bug4, nil];
+   // RWTCategory * category1 = [[RWTCategory alloc] initWithTitle:@"Credit Cards" image:[UIImage imageNamed:@"potatoBugThumb.jpg"]] ;
+    //RWTCategory * category2 = [[RWTCategory alloc] initWithTitle:@"Credit Cards" image:[UIImage imageNamed:@"potatoBugThumb.jpg"]] ;
+    //RWTCategory * category3 = [[RWTCategory alloc] initWithTitle:@"Credit Cards" image:[UIImage imageNamed:@"potatoBugThumb.jpg"]] ;
+    //RWTCategory * category4 = [[RWTCategory alloc] initWithTitle:@"Credit Cards" image:[UIImage imageNamed:@"potatoBugThumb.jpg"]] ;
     
-    UINavigationController *navController = (UINavigationController *) self.window.rootViewController;
-    RWTMasterViewController *masterController = [navController.viewControllers objectAtIndex:0];
-    masterController.bugs = bugs;
-    // Override point for customization after application launch.
     
-    UINavigationController *navigationController = (UINavigationController *)self.window.rootViewController;
-    RWTMasterViewController *controller = (RWTMasterViewController *)navigationController.topViewController;
-    controller.managedObjectContext = self.managedObjectContext;
+    //NSMutableArray *categories = [NSMutableArray arrayWithObjects:category1, category2, category3, category4, nil];
+    //UINavigationController * navController = (UINavigationController *) self.window.rootViewController ;
+    //RWTCategoriesViewController * categoriesController = [navController.viewControllers objectAtIndex:0] ;
+    //categoriesController.categories = categories ;
+   // UINavigationController *navigationController = (UINavigationController *)self.window.rootViewController;
+   // RWTCategoriesViewController *controller = (RWTCategoriesViewController *)navigationController.topViewController;
+   // controller.managedObjectContext = self.managedObjectContext;
+
+    
+    //RWTScaryBugDoc *bug1 = [[RWTScaryBugDoc alloc] initWithTitle:@"Potato Bug" rating:4 thumbImage:[UIImage imageNamed:@"potatoBugThumb.jpg"] fullImage:[UIImage imageNamed:@"potatoBug.jpg"]];
+    //RWTScaryBugDoc *bug2 = [[RWTScaryBugDoc alloc] initWithTitle:@"House Centipede" rating:3 thumbImage:[UIImage imageNamed:@"centipedeThumb.jpg"] fullImage:[UIImage imageNamed:@"centipede.jpg"]];
+    //RWTScaryBugDoc *bug3 = [[RWTScaryBugDoc alloc] initWithTitle:@"Wolf Spider" rating:5 thumbImage:[UIImage imageNamed:@"wolfSpiderThumb.jpg"] fullImage:[UIImage imageNamed:@"wolfSpider.jpg"]];
+    //RWTScaryBugDoc *bug4 = [[RWTScaryBugDoc alloc] initWithTitle:@"Lady Bug" rating:1 thumbImage:[UIImage imageNamed:@"ladybugThumb.jpg"] fullImage:[UIImage imageNamed:@"ladybug.jpg"]];
+    //NSMutableArray *bugs = [NSMutableArray arrayWithObjects:bug1, bug2, bug3, bug4, nil];
+    
+    //UINavigationController *navController = (UINavigationController *) self.window.rootViewController;
+    //RWTMasterViewController *masterController = [navController.viewControllers objectAtIndex:1];
+  
+    
+   // RWTCategoriesViewController *controller = (RWTCategoriesViewController *)navigationController.topViewController;
+   //masterController.managedObjectContext = self.managedObjectContext;
     return YES;
 }
 							
