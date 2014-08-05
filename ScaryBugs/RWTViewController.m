@@ -7,7 +7,6 @@
 //
 
 #import "RWTViewController.h"
-
 @interface RWTViewController ()
 
 @end
@@ -26,6 +25,19 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+    if ([[NSUserDefaults standardUserDefaults] boolForKey:@"HasLaunchedOnce"])
+    {
+        self.view.backgroundColor = [UIColor yellowColor];
+        
+        // app already launched
+    }
+    else
+    {
+        self.view.backgroundColor = [UIColor grayColor];
+        [[NSUserDefaults standardUserDefaults] setBool:YES forKey:@"HasLaunchedOnce"];
+        [[NSUserDefaults standardUserDefaults] synchronize];
+        // This is the first launch ever
+    }
     credentialsDictionary = [[NSDictionary alloc] initWithObjects:[NSArray arrayWithObjects:@"password", @"1234", nil] forKeys:[NSArray arrayWithObjects:@"username",@"ami", nil]];
 
     // Do any additional setup after loading the view.
