@@ -44,6 +44,7 @@
 		E118C2C5196348BC0036AB81 /* shockedface2_full.png in Resources */ = {isa = PBXBuildFile; fileRef = E118C2C3196348BC0036AB81 /* shockedface2_full.png */; };
 		E118C2C919634A280036AB81 /* shockedface2_half.png in Resources */ = {isa = PBXBuildFile; fileRef = E118C2C819634A280036AB81 /* shockedface2_half.png */; };
 		E118C2CB19634A370036AB81 /* logo1.png in Resources */ = {isa = PBXBuildFile; fileRef = E118C2CA19634A370036AB81 /* logo1.png */; };
+		E11F434E1992DF990001C2E6 /* KeychainItemWrapper.m in Sources */ = {isa = PBXBuildFile; fileRef = E11F434D1992DF990001C2E6 /* KeychainItemWrapper.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 		E1505AFE1989834B00940607 /* RWTViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E1505AFD1989834B00940607 /* RWTViewController.m */; };
 		E1E2F81D198FDE9800666FDA /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E1E2F81C198FDE9800666FDA /* Security.framework */; settings = {ATTRIBUTES = (Required, ); }; };
 		E1FBAB121978E5D6008A524B /* SVProgressHUD.m in Sources */ = {isa = PBXBuildFile; fileRef = E1FBAB111978E5D6008A524B /* SVProgressHUD.m */; };
@@ -109,6 +110,8 @@
 		E118C2C3196348BC0036AB81 /* shockedface2_full.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = shockedface2_full.png; sourceTree = "<group>"; };
 		E118C2C819634A280036AB81 /* shockedface2_half.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = shockedface2_half.png; path = ExtraStuffForScaryBugs/shockedface2_half.png; sourceTree = "<group>"; };
 		E118C2CA19634A370036AB81 /* logo1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = logo1.png; sourceTree = "<group>"; };
+		E11F434C1992DF990001C2E6 /* KeychainItemWrapper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = KeychainItemWrapper.h; path = ../../KeychainItemWrapper.h; sourceTree = "<group>"; };
+		E11F434D1992DF990001C2E6 /* KeychainItemWrapper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = KeychainItemWrapper.m; path = ../../KeychainItemWrapper.m; sourceTree = "<group>"; };
 		E1505AFC1989834B00940607 /* RWTViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RWTViewController.h; sourceTree = "<group>"; };
 		E1505AFD1989834B00940607 /* RWTViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RWTViewController.m; sourceTree = "<group>"; };
 		E1E2F81C198FDE9800666FDA /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
@@ -224,6 +227,8 @@
 		E118C28F1960A56C0036AB81 /* GUI */ = {
 			isa = PBXGroup;
 			children = (
+				E11F434C1992DF990001C2E6 /* KeychainItemWrapper.h */,
+				E11F434D1992DF990001C2E6 /* KeychainItemWrapper.m */,
 				E118C2621960A3440036AB81 /* RWTAppDelegate.m */,
 				E118C2641960A3440036AB81 /* Main.storyboard */,
 				E118C26A1960A3440036AB81 /* RWTMasterViewController.h */,
@@ -418,6 +423,7 @@
 				E118C2C0196348720036AB81 /* RWTUIImageExtras.m in Sources */,
 				E118C26C1960A3440036AB81 /* RWTMasterViewController.m in Sources */,
 				E118C2691960A3440036AB81 /* ScaryBugs.xcdatamodeld in Sources */,
+				E11F434E1992DF990001C2E6 /* KeychainItemWrapper.m in Sources */,
 				9D951A2819883D64004CE003 /* RWTCategory.m in Sources */,
 				E118C2BC1960CF3E0036AB81 /* RWTRateView.m in Sources */,
 				E118C2931960A6EE0036AB81 /* RWTScaryBugData.m in Sources */,
