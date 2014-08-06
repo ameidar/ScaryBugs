@@ -29,10 +29,10 @@
 {
     [super viewDidLoad];
 
-    RWTCategory * category1 = [[RWTCategory alloc] initWithTitle:@"Credit Cards" image:[UIImage imageNamed:@"potatoBugThumb.jpg"]] ;
-    RWTCategory * category2 = [[RWTCategory alloc] initWithTitle:@"Credit Cards" image:[UIImage imageNamed:@"potatoBugThumb.jpg"]] ;
-    RWTCategory * category3 = [[RWTCategory alloc] initWithTitle:@"Credit Cards" image:[UIImage imageNamed:@"potatoBugThumb.jpg"]] ;
-    RWTCategory * category4 = [[RWTCategory alloc] initWithTitle:@"Credit Cards" image:[UIImage imageNamed:@"potatoBugThumb.jpg"]] ;
+    RWTCategory * category1 = [[RWTCategory alloc] initWithTitle:@"Ids" image:[UIImage imageNamed:@"potatoBugThumb.jpg"]] ;
+    RWTCategory * category2 = [[RWTCategory alloc] initWithTitle:@"Credit cards" image:[UIImage imageNamed:@"potatoBugThumb.jpg"]];
+    RWTCategory * category3 = [[RWTCategory alloc] initWithTitle:@"Documents" image:[UIImage imageNamed:@"potatoBugThumb.jpg"]] ;
+    RWTCategory * category4 = [[RWTCategory alloc] initWithTitle:@"Invoices" image:[UIImage imageNamed:@"potatoBugThumb.jpg"]] ;
     
     
     if (!_categories)
