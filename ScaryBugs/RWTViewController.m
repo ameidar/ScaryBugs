@@ -30,10 +30,20 @@
     [super viewDidLoad];
     KeychainItemWrapper *keychain =
     [[KeychainItemWrapper alloc] initWithIdentifier:@"TestAppLoginData" accessGroup:nil];
-
+    
+    
+   
     if ([[NSUserDefaults standardUserDefaults] boolForKey:@"HasLaunchedOnce"])
     {
         self.view.backgroundColor = [UIColor yellowColor];
+        [[NSUserDefaults standardUserDefaults] setBool:NO forKey:@"HasLaunchedOnce"];
+        [[NSUserDefaults standardUserDefaults] synchronize];
+        
+        // app already launched
+    }
+    else
+    {
+        self.view.backgroundColor = [UIColor grayColor];
         // Get username from keychain (if it exists)
         [usernameField setText:[keychain objectForKey:(__bridge id)kSecAttrAccount]];
         NSLog(@"username: %@", [usernameField text]);
@@ -41,14 +51,8 @@
         // Get password from keychain (if it exists)
         [passwordField setText:[keychain objectForKey:(__bridge id)kSecValueData]];
         NSLog(@"password: %@", [passwordField text]);
+
         
-        // app already launched
-    }
-    else
-    {
-        self.view.backgroundColor = [UIColor grayColor];
-        [[NSUserDefaults standardUserDefaults] setBool:NO forKey:@"HasLaunchedOnce"];
-        [[NSUserDefaults standardUserDefaults] synchronize];
         
 
 
@@ -67,6 +71,15 @@
 {
     KeychainItemWrapper *keychain =
     [[KeychainItemWrapper alloc] initWithIdentifier:@"TestAppLoginData" accessGroup:nil];
+    
+    // Store username to keychain
+    
+    [keychain setObject:[usernameField text] forKey:(__bridge id)kSecAttrAccount];
+    
+    // Store password to keychain
+    
+    [keychain setObject:[passwordField text] forKey:(__bridge id)kSecValueData];
+    
 
     
     if ([[credentialsDictionary objectForKey:usernameField.text]isEqualToString:passwordField.text]) {
@@ -78,14 +91,7 @@
         [alert show];
     }
     
-    // Store username to keychain
-    
-    //[keychain setObject:[usernameField text] forKey:(__bridge id)kSecAttrAccount];
-    
-    // Store password to keychain
-    
-    //[keychain setObject:[passwordField text] forKey:(__bridge id)kSecValueData];
-    
+   
     
 }
 
