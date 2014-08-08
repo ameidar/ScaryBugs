@@ -7,6 +7,8 @@
 //
 
 #import "RWTViewController.h"
+#import "KeychainItemWrapper.h"
+
 
 @interface RWTViewController ()
 
@@ -26,8 +28,38 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+    KeychainItemWrapper *keychain =
+    [[KeychainItemWrapper alloc] initWithIdentifier:@"TestAppLoginData" accessGroup:nil];
+    
+    
+    
+    if ([[NSUserDefaults standardUserDefaults] boolForKey:@"HasLaunchedOnce"])
+    {
+        self.view.backgroundColor = [UIColor yellowColor];
+        [[NSUserDefaults standardUserDefaults] setBool:NO forKey:@"HasLaunchedOnce"];
+        [[NSUserDefaults standardUserDefaults] synchronize];
+        
+        // app already launched
+    }
+    else
+    {
+        self.view.backgroundColor = [UIColor grayColor];
+        // Get username from keychain (if it exists)
+        [usernameField setText:[keychain objectForKey:(__bridge id)kSecAttrAccount]];
+        NSLog(@"username: %@", [usernameField text]);
+        
+        // Get password from keychain (if it exists)
+        [passwordField setText:[keychain objectForKey:(__bridge id)kSecValueData]];
+        NSLog(@"password: %@", [passwordField text]);
+        
+        
+        
+        
+        
+        // This is the first launch ever
+    }
     credentialsDictionary = [[NSDictionary alloc] initWithObjects:[NSArray arrayWithObjects:@"password", @"1234", nil] forKeys:[NSArray arrayWithObjects:@"username",@"ami", nil]];
-
+    
     // Do any additional setup after loading the view.
 }
 
@@ -37,6 +69,19 @@
 
 - (IBAction)enterCredentials
 {
+    KeychainItemWrapper *keychain =
+    [[KeychainItemWrapper alloc] initWithIdentifier:@"TestAppLoginData" accessGroup:nil];
+    
+    // Store username to keychain
+    
+    [keychain setObject:[usernameField text] forKey:(__bridge id)kSecAttrAccount];
+    
+    // Store password to keychain
+    
+    [keychain setObject:[passwordField text] forKey:(__bridge id)kSecValueData];
+    
+    
+    
     if ([[credentialsDictionary objectForKey:usernameField.text]isEqualToString:passwordField.text]) {
         UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Correct Password" message:@"This password is correct." delegate:self cancelButtonTitle:@"Dismiss" otherButtonTitles:nil];
         [alert show];
@@ -45,6 +90,9 @@
         UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Incorrect Password" message:@"This password is incorrect." delegate:self cancelButtonTitle:@"Dismiss" otherButtonTitles:nil];
         [alert show];
     }
+    
+    
+    
 }
 
 - (BOOL)textFieldShouldReturn:(UITextField *)textField
@@ -61,14 +109,14 @@
 }
 
 /*
-#pragma mark - Navigation
-
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
-{
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
-}
-*/
+ #pragma mark - Navigation
+ 
+ // In a storyboard-based application, you will often want to do a little preparation before navigation
+ - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
+ {
+ // Get the new view controller using [segue destinationViewController].
+ // Pass the selected object to the new view controller.
+ }
+ */
 
 @end
