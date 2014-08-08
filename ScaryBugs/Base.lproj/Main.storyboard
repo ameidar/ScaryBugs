@@ -19,6 +19,33 @@
             </objects>
             <point key="canvasLocation" x="301" y="-828"/>
         </scene>
+        <!--View Controller-->
+        <scene sceneID="SeU-wa-npO">
+            <objects>
+                <viewController id="HLB-4m-t0Z" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="6wU-cJ-Gaz"/>
+                        <viewControllerLayoutGuide type="bottom" id="D6e-oE-XQ1"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="HN6-A2-XJD">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="login success" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9dV-Mg-08Q">
+                                <rect key="frame" x="134" y="111" width="63" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="0.40729888418898685" blue="0.33048405233339373" alpha="1" colorSpace="calibratedRGB"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="Vrd-6Y-l3z"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="irw-VA-JFx" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-974" y="-1940"/>
+        </scene>
         <!--Master View Controller - Master-->
         <scene sceneID="VgW-fR-Quf">
             <objects>
@@ -29,7 +56,7 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <prototypes>
                             <tableViewCell contentMode="scaleToFill" selectionStyle="blue" accessoryType="detailDisclosureButton" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="MyBasicCell" textLabel="2pz-XF-uhl" style="IBUITableViewCellStyleDefault" id="m0d-ak-lc9">
-                                <rect key="frame" x="0.0" y="22" width="320" height="44"/>
+                                <rect key="frame" x="0.0" y="86" width="320" height="44"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="m0d-ak-lc9" id="d3P-M7-ByW">
                                     <rect key="frame" x="0.0" y="0.0" width="253" height="43"/>
@@ -128,72 +155,6 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="lrm-kH-fPn" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-411" y="-1524"/>
-        </scene>
-        <!--View Controller - Login Page-->
-        <scene sceneID="DQy-2g-loG">
-            <objects>
-                <viewController id="59w-M8-IrC" customClass="RWTViewController" sceneMemberID="viewController">
-                    <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="6mS-kj-at5"/>
-                        <viewControllerLayoutGuide type="bottom" id="6Ys-p2-U2n"/>
-                    </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="Ox7-HV-uRh">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
-                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                        <subviews>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Username" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="jL4-1x-cMN">
-                                <rect key="frame" x="39" y="151" width="242" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
-                                <connections>
-                                    <outlet property="delegate" destination="59w-M8-IrC" id="s9C-9s-9yB"/>
-                                </connections>
-                            </textField>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Password" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="a2G-WO-EQ6">
-                                <rect key="frame" x="39" y="196" width="242" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
-                                <connections>
-                                    <outlet property="delegate" destination="59w-M8-IrC" id="CBS-RA-GLH"/>
-                                </connections>
-                            </textField>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bmN-CG-ewY">
-                                <rect key="frame" x="96" y="251" width="129" height="38"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Login">
-                                    <color key="titleColor" red="1" green="0.40729888419999999" blue="0.3304840523" alpha="1" colorSpace="calibratedRGB"/>
-                                    <color key="titleShadowColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                                <connections>
-                                    <action selector="enterCredentials" destination="59w-M8-IrC" eventType="touchUpInside" id="kUb-Wd-gIU"/>
-                                    <segue destination="HLB-4m-t0Z" kind="push" id="opi-zh-3Dr"/>
-                                </connections>
-                            </button>
-                        </subviews>
-                        <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
-                        <gestureRecognizers/>
-                        <connections>
-                            <outletCollection property="gestureRecognizers" destination="fNg-QS-kKO" appends="YES" id="GHJ-VR-3kF"/>
-                        </connections>
-                    </view>
-                    <navigationItem key="navigationItem" title="Login Page" id="7rk-SM-0r0">
-                        <barButtonItem key="rightBarButtonItem" title="sign in" id="UWW-kk-Yom"/>
-                    </navigationItem>
-                    <connections>
-                        <outlet property="passwordField" destination="a2G-WO-EQ6" id="lbv-Wg-Ia6"/>
-                        <outlet property="usernameField" destination="jL4-1x-cMN" id="mX2-Av-2il"/>
-                    </connections>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="RP9-cS-MDi" userLabel="First Responder" sceneMemberID="firstResponder"/>
-                <tapGestureRecognizer id="fNg-QS-kKO">
-                    <connections>
-                        <action selector="backgroundTap:" destination="59w-M8-IrC" id="TLT-3i-RFn"/>
-                    </connections>
-                </tapGestureRecognizer>
-            </objects>
-            <point key="canvasLocation" x="-1428" y="-2445"/>
         </scene>
         <!--Categories View Controller-->
         <scene sceneID="4ct-jt-CuM">
