@@ -129,7 +129,7 @@
             </objects>
             <point key="canvasLocation" x="469" y="-2452"/>
         </scene>
-        <!--View Controller - Login Page-->
+        <!--View Controller - Login-->
         <scene sceneID="DQy-2g-loG">
             <objects>
                 <viewController id="59w-M8-IrC" customClass="RWTViewController" sceneMemberID="viewController">
@@ -178,7 +178,7 @@
                             <outletCollection property="gestureRecognizers" destination="fNg-QS-kKO" appends="YES" id="GHJ-VR-3kF"/>
                         </connections>
                     </view>
-                    <navigationItem key="navigationItem" title="Login Page" id="7rk-SM-0r0">
+                    <navigationItem key="navigationItem" title="Login" id="7rk-SM-0r0">
                         <barButtonItem key="rightBarButtonItem" title="sign in" id="UWW-kk-Yom"/>
                     </navigationItem>
                     <connections>

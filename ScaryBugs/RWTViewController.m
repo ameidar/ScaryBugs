@@ -32,7 +32,7 @@
     [[KeychainItemWrapper alloc] initWithIdentifier:@"TestAppLoginData" accessGroup:nil];
     
     
-   
+    
     if ([[NSUserDefaults standardUserDefaults] boolForKey:@"HasLaunchedOnce"])
     {
         self.view.backgroundColor = [UIColor yellowColor];
@@ -51,15 +51,15 @@
         // Get password from keychain (if it exists)
         [passwordField setText:[keychain objectForKey:(__bridge id)kSecValueData]];
         NSLog(@"password: %@", [passwordField text]);
-
         
         
-
-
-                // This is the first launch ever
+        
+        
+        
+        // This is the first launch ever
     }
     credentialsDictionary = [[NSDictionary alloc] initWithObjects:[NSArray arrayWithObjects:@"password", @"1234", nil] forKeys:[NSArray arrayWithObjects:@"username",@"ami", nil]];
-
+    
     // Do any additional setup after loading the view.
 }
 
@@ -80,7 +80,7 @@
     
     [keychain setObject:[passwordField text] forKey:(__bridge id)kSecValueData];
     
-
+    
     
     if ([[credentialsDictionary objectForKey:usernameField.text]isEqualToString:passwordField.text]) {
         UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Correct Password" message:@"This password is correct." delegate:self cancelButtonTitle:@"Dismiss" otherButtonTitles:nil];
@@ -91,7 +91,7 @@
         [alert show];
     }
     
-   
+    
     
 }
 
@@ -109,14 +109,14 @@
 }
 
 /*
-#pragma mark - Navigation
-
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
-{
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
-}
-*/
+ #pragma mark - Navigation
+ 
+ // In a storyboard-based application, you will often want to do a little preparation before navigation
+ - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
+ {
+ // Get the new view controller using [segue destinationViewController].
+ // Pass the selected object to the new view controller.
+ }
+ */
 
 @end
