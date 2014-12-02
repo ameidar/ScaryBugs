@@ -58,7 +58,7 @@
         
         // This is the first launch ever
     }
-    credentialsDictionary = [[NSDictionary alloc] initWithObjects:[NSArray arrayWithObjects:@"password", @"1234", nil] forKeys:[NSArray arrayWithObjects:@"username",@"ami", nil]];
+    credentialsDictionary = [[NSDictionary alloc] initWithObjects:[NSArray arrayWithObjects:@"password", @"1234", nil] forKeys:[NSArray arrayWithObjects:@"username",@"inna", nil]];
     
     // Do any additional setup after loading the view.
 }
