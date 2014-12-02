@@ -24,6 +24,8 @@
 // After @implementation
 @synthesize bugs = _bugs;
 
+@synthesize category = _category ;
+
 - (void)awakeFromNib
 {
     [super awakeFromNib];
@@ -54,9 +56,9 @@
     self.title = @"Documents";
     
    // self.navigationItem.leftBarButtonItem = self.editButtonItem;
-   // self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc]
-   //                                           initWithBarButtonSystemItem:UIBarButtonSystemItemAdd
-   //                                           target:self action:@selector(addTapped:)];
+    //self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc]
+     //                                         initWithBarButtonSystemItem:UIBarButtonSystemItemAdd
+    //``````````````````````````                                          target:self action:@selector(addTapped:)];
 
     
     RWTScaryBugDoc *bug1 = [[RWTScaryBugDoc alloc] initWithTitle:@"Potato Bug" rating:4 thumbImage:[UIImage imageNamed:@"potatoBugThumb.jpg"] fullImage:[UIImage imageNamed:@"potatoBug.jpg"]];

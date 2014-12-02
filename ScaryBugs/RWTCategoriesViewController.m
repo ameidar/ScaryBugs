@@ -30,9 +30,9 @@
     [super viewDidLoad];
 
     RWTCategory * category1 = [[RWTCategory alloc] initWithTitle:@"Credit Cards" image:[UIImage imageNamed:@"potatoBugThumb.jpg"]] ;
-    RWTCategory * category2 = [[RWTCategory alloc] initWithTitle:@"Credit Cards" image:[UIImage imageNamed:@"potatoBugThumb.jpg"]] ;
-    RWTCategory * category3 = [[RWTCategory alloc] initWithTitle:@"Credit Cards" image:[UIImage imageNamed:@"potatoBugThumb.jpg"]] ;
-    RWTCategory * category4 = [[RWTCategory alloc] initWithTitle:@"Credit Cards" image:[UIImage imageNamed:@"potatoBugThumb.jpg"]] ;
+    RWTCategory * category2 = [[RWTCategory alloc] initWithTitle:@"IDs" image:[UIImage imageNamed:@"potatoBugThumb.jpg"]] ;
+    RWTCategory * category3 = [[RWTCategory alloc] initWithTitle:@"Reciepts" image:[UIImage imageNamed:@"potatoBugThumb.jpg"]] ;
+    RWTCategory * category4 = [[RWTCategory alloc] initWithTitle:@"Other Documents" image:[UIImage imageNamed:@"potatoBugThumb.jpg"]] ;
     
     
     if (!_categories)
@@ -40,12 +40,10 @@
         
     
 	// Do any additional setup after loading the view, typically from a nib.
-    self.navigationItem.leftBarButtonItem = self.editButtonItem;
     self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc]
                                               initWithBarButtonSystemItem:UIBarButtonSystemItemAdd
                                               target:self action:@selector(addTapped:)];
     self.title = @"Categories" ;
-    self.navigationItem.leftBarButtonItem = self.editButtonItem;
 }
 
 - (void)didReceiveMemoryWarning

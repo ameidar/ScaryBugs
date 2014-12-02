@@ -7,12 +7,16 @@
 //
 
 #import <Foundation/Foundation.h>
+#import "RWTScaryBugDoc.h"
 
 @interface RWTCategory : NSObject
 
 @property (strong) UIImage *image ;
 @property (strong) NSString *title ;
+@property (strong) NSMutableArray * documents ;
 
 -(id)initWithTitle:(NSString *)title image:(UIImage *)thumbImage;
+
+-(void)addDocument:(RWTScaryBugDoc *)document;
 
 @end

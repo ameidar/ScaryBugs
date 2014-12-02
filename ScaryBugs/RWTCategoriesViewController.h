@@ -10,6 +10,7 @@
 
 @interface RWTCategoriesViewController : UITableViewController <UITableViewDelegate, UITableViewDataSource>
 
+@property (strong) NSDictionary * dic ;
 @property (strong) NSMutableArray *categories ;
 
 @end
